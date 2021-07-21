@@ -1,1 +1,2 @@
-console.log("It's everything all rigthnpn");
+import "./print"
+console.log("aaaaaaaaaaaaaaaaaaaaaaah");
