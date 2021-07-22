@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body{
+    font-family: 'Raleway', sans-serif;  
+}
+
+.top-bar{
+    background-color: #6e9b9c;   
+    padding: 41px; 
+    color: #d6dcdc;
+}
+.container{
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.logo{
+    color: #f7faad;
+    font-weight: 900;
+}
+
+.top{
+    display: flex;
+    flex-direction: row ;
+    font-size: 48px;
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin:0 auto;
+}
+
+menu li {
+   padding-left: 34px;
+}
+
+.main{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.wrap{
+    padding-top: 32px;
+    display: flex;
+    flex-direction: row;   
+}
+
+.our-history p{
+    font-style: italic;
+    font-size: 24px;
+    padding: 110px 0 0;
+    text-align: center;
+    width: 85%;
+}
+
+
+.image-home img{
+    width: 85%;
+    
+}
+
+
+.footer{
+    background-color: #f7faad;
+    height: 8em;
+    text-align: center;
+    padding-top: 33px;
+    font-size: 24px;
+    color: #f44b90;
+    font-weight: 600;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #f44b90;
+    font-weight: 600;
+}
+
+.butt{
+  background-color: #f44b90; 
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 12px;
+}
+
+.butt:hover{
+    background-color: #eca9c4; 
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    text-align: left;
+    color: black;
+}
+
+.contact li {
+    margin: 15px 0 15px;
+    font-weight: 600;
+}
+
+.contact li img {
+    width: 85%;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 89px;
+    padding-bottom: 24px;
+}
+
+
+.card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 12px; 
+    padding: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.card img {
+    height:350px;
+    width:100%;
+}
+
+.food-photo{
+    width: 70%;
+    text-align: center;
+
+}
