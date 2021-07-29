@@ -17,7 +17,13 @@ function loadPage(){
     let topBar = document.createElement("div")
     topBar.classList.add("topBar")
     content.appendChild(topBar)
-    console.log("entrounp")
+
+    let container = document.createElement("div")
+    container.classList.add("container")
+    topBar.appendChild(container)
+
+
+    console.log("entrou lindo!")
 
 }
 
