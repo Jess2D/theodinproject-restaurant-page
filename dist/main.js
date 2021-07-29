@@ -23,9 +23,16 @@ function loadPage(){
     topBar.appendChild(container)
 
     let top = document.createElement("div")
-    container.classList.add("top")
+    top.classList.add("top")
     container.appendChild(top)
 
+    let logo = document.createElement("div")
+    logo.classList.add("logo")
+    top.appendChild(logo)
+
+    let menu = document.createElement("div")
+    menu.classList.add("menu")
+    top.appendChild(menu)
 
     console.log("entrou lindo!")
 
