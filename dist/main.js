@@ -1,10 +1,37 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-console.log("hello world")
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadPage": () => (/* binding */ loadPage)
+/* harmony export */ });
+
+
+
+function loadPage(){
+    let content = document.getElementById("content");
+    let topBar = document.createElement("div")
+    topBar.classList.add("topBar")
+    content.appendChild(topBar)
+    console.log("entrounp")
+
+}
+
+function container(){
+    let container = document.createElement("div")
+    container.setAttribute("class", "container")
+}
+
+
+function footer(){
+
+}
+
+
 
 /***/ })
 /******/ 	]);
@@ -34,18 +61,6 @@ console.log("hello world")
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -76,14 +91,16 @@ console.log("hello world")
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_print__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+ 
 
-console.log("aaaaaaaaaaaaaaaaaaaaaaah");
+
+
+
+(0,_loadPage__WEBPACK_IMPORTED_MODULE_0__.loadPage)();
 })();
 
 /******/ })()

@@ -1,2 +1,6 @@
-import "./print"
-console.log("aaaaaaaaaaaaaaaaaaaaaaah");
+ 
+import {loadPage} from "./loadPage"
+
+
+
+loadPage();

@@ -20,5 +20,8 @@ Create a Restaurant page with Contact and Menu pages.
 - JavaScript module bundler
 - Webpack
 
+##Fonts
+https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+
 
 
