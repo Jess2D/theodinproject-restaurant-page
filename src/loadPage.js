@@ -11,6 +11,10 @@ function loadPage(){
     container.classList.add("container")
     topBar.appendChild(container)
 
+    let top = document.createElement("div")
+    container.classList.add("top")
+    container.appendChild(top)
+
 
     console.log("entrou lindo!")
 
