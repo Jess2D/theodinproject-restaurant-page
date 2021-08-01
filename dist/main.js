@@ -10,21 +10,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "loadPage": () => (/* binding */ loadPage)
 /* harmony export */ });
 
-
-
 function loadPage(){
     let content = document.getElementById("content");
+    // top
     let topBar = document.createElement("div")
     topBar.classList.add("topBar")
     content.appendChild(topBar)
 
-    let container = document.createElement("div")
-    container.classList.add("container")
-    topBar.appendChild(container)
+    let containerTop = document.createElement("div")
+    containerTop.classList.add("containerTop")
+
+    topBar.appendChild(containerTop)
 
     let top = document.createElement("div")
     top.classList.add("top")
-    container.appendChild(top)
+    containerTop.appendChild(top)
 
     let logo = document.createElement("div")
     logo.classList.add("logo")
@@ -34,19 +34,24 @@ function loadPage(){
     menu.classList.add("menu")
     top.appendChild(menu)
 
-    console.log("entrou lindo!")
+    //center page
+
+    let main = document.createElement("div")
+    main.classList.add("main")
+    content.appendChild(main)
+
+    //footer
+    let footer = document.createElement("div")
+    footer.classList.add("footer")
+    content.appendChild(footer)
+    
+    let containerFooter = document.createElement("div")
+    containerFooter.classList.add("containerFooter")
+    footer.appendChild(containerFooter)
 
 }
 
-function container(){
-    let container = document.createElement("div")
-    container.setAttribute("class", "container")
-}
 
-
-function footer(){
-
-}
 
 
 
