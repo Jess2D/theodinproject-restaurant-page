@@ -17,7 +17,7 @@ function loadPage(){
     let content = document.getElementById("content");
     // top
     let topBar = document.createElement("div")
-    topBar.classList.add("topBar")
+    topBar.classList.add("top-bar")
     content.appendChild(topBar)
 
     let containerTop = document.createElement("div")
@@ -31,10 +31,20 @@ function loadPage(){
 
     let logo = document.createElement("div")
     logo.classList.add("logo")
+    logo.innerHTML = "Best Choice"
     top.appendChild(logo)
 
-    let menu = document.createElement("div")
+    let menu = document.createElement("menu")
     menu.classList.add("menu")
+    let li = document.createElement("li")
+    li.textContent = "Home"
+    menu.appendChild(li)
+    li = document.createElement("li")
+    li.textContent = "Menu"
+    menu.appendChild(li)
+    li = document.createElement("li")
+    li.textContent = "Contact"
+    menu.appendChild(li)
     top.appendChild(menu)
 
     //center page
