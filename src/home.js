@@ -31,8 +31,6 @@ function home(main) {
     imageHome.appendChild(img)
     wrap.appendChild(imageHome)
 
-
-
 }
 
 export{home}

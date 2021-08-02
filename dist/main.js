@@ -51,6 +51,7 @@ function loadPage(){
     
     let containerFooter = document.createElement("div")
     containerFooter.classList.add("containerFooter")
+    containerFooter.innerHTML = `Copyright © 2021 <a href="https://github.com/Jess2D"> [ jess2d 🦄 ]</a>`
     footer.appendChild(containerFooter)
 
 }
@@ -99,8 +100,6 @@ function home(main) {
 
     imageHome.appendChild(img)
     wrap.appendChild(imageHome)
-
-
 
 }
 
