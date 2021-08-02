@@ -9,6 +9,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "loadPage": () => (/* binding */ loadPage)
 /* harmony export */ });
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
 
 function loadPage(){
     let content = document.getElementById("content");
@@ -39,6 +42,7 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
+    ;(0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(main);
 
     //footer
     let footer = document.createElement("div")
@@ -52,6 +56,53 @@ function loadPage(){
 }
 
 
+
+
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "home": () => (/* binding */ home)
+/* harmony export */ });
+function home(main) {
+
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+
+
+    let wrap = document.createElement("div")
+    wrap.classList.add("wrap")
+    containerMain.appendChild(wrap)
+
+    let ourHistory = document.createElement("div")
+    ourHistory.classList.add("our-history")
+    wrap.appendChild(ourHistory)
+
+    let p = document.createElement("p")
+    p.innerText = "We imagine a world where there’s no such thing as a Health Food taste bad and all farmers live prosperously."
+    ourHistory.appendChild(p)
+
+    let button = document.createElement("button")
+    button.classList.add("butt")
+    button.innerHTML = "Learn More"
+    ourHistory.appendChild(button)
+
+    let imageHome = document.createElement("div")
+    imageHome.classList.add("image-home")
+
+    let img = document.createElement("img")
+    img.src = "../img/health.PNG"
+
+    imageHome.appendChild(img)
+    wrap.appendChild(imageHome)
+
+
+
+}
 
 
 

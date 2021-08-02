@@ -1,4 +1,6 @@
 
+import {home} from "./home"
+
 function loadPage(){
     let content = document.getElementById("content");
     // top
@@ -28,6 +30,7 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
+    home(main);
 
     //footer
     let footer = document.createElement("div")

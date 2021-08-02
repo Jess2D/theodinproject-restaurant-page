@@ -13,7 +13,7 @@ body{
     padding: 41px; 
     color: #d6dcdc;
 }
-.container{
+.containerMain, .containerTop,.containerFooter{
     width: 90%;
     max-width: 1240px;
     margin: 0 auto;
