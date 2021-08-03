@@ -13,7 +13,7 @@ body{
     padding: 41px; 
     color: #d6dcdc;
 }
-.container{
+.containerMain, .containerTop,.containerFooter{
     width: 90%;
     max-width: 1240px;
     margin: 0 auto;
@@ -49,7 +49,7 @@ menu li {
 }
 
 .wrap{
-    padding-top: 32px;
+    padding: 82px;
     display: flex;
     flex-direction: row;   
 }
