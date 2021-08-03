@@ -11,6 +11,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _contacts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+
 
 
 
@@ -54,7 +56,7 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-    ;(0,_contacts__WEBPACK_IMPORTED_MODULE_1__.contacts)(main);
+    ;(0,_menu__WEBPACK_IMPORTED_MODULE_2__.nav)(main);
 
     //footer
     let footer = document.createElement("div")
@@ -168,6 +170,36 @@ function contacts(main) {
 
     
 }
+
+
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "nav": () => (/* binding */ nav)
+/* harmony export */ });
+function nav(main) {
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+
+    let wrap = document.createElement("div")
+    wrap.classList.add("wrap")
+    containerMain.appendChild(wrap)
+
+    let grid = document.createElement("div")
+    grid.classList.add("grid")
+    wrap.appendChild(grid)
+
+  
+
+    
+}
+
 
 
 

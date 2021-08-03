@@ -1,6 +1,7 @@
 
 import {home} from "./home"
 import {contacts} from "./contacts"
+import {nav} from "./menu"
 
 function loadPage(){
     let content = document.getElementById("content");
@@ -41,7 +42,7 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-    contacts(main);
+    nav(main);
 
     //footer
     let footer = document.createElement("div")
