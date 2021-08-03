@@ -201,6 +201,12 @@ function nav(main) {
       "alt": "Chia", 
       "h2": "Chia Pudding"}, 
 
+      
+      {"class":"food-photo", 
+      "src" : "../img/chiken-salad.jpg",
+      "alt": "Chicken Salad", 
+      "h2": "Chicken Salad"},
+
       {"class":"food-photo", 
       "src" : "../img/fetta-salad.jpg",
       "alt": "Fetta Salad", 
@@ -208,9 +214,35 @@ function nav(main) {
 
 
       {"class":"food-photo", 
-      "src" : "../img/chiken-salad.jpg",
-      "alt": "Chicken Salad", 
-      "h2": "Chicken Salad"}
+      "src" : "../img/somthie.jpg",
+      "alt": "Smothie", 
+      "h2": "Warrior Smothie"},
+
+      {"class":"food-photo", 
+      "src" : "../img/french-toast.jpg",
+      "alt": "French Toast", 
+      "h2": "French Toast"},
+
+      {"class":"food-photo", 
+      "src" : "../img/gluten-free-muffin.jpg",
+      "alt": "Gluten Free Muffin", 
+      "h2": "Gluten Free Muffin"},
+      
+      {"class":"food-photo", 
+      "src" : "../img/leek-soup.jpg",
+      "alt": "Leek and Potato Soup", 
+      "h2": "Leek and Potato Soup"},
+
+      {"class":"food-photo", 
+      "src" : "../img/ojo-bife.jpg",
+      "alt": "Scot File", 
+      "h2": "Beef Socth"},
+
+      {"class":"food-photo", 
+      "src" : "../img/rump.jpg",
+      "alt": "Beef Rump", 
+      "h2": "Beef Rump"},
+
 
   ]
 
