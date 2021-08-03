@@ -10,6 +10,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "loadPage": () => (/* binding */ loadPage)
 /* harmony export */ });
 /* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _contacts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+
 
 
 
@@ -52,7 +54,7 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-    ;(0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(main);
+    ;(0,_contacts__WEBPACK_IMPORTED_MODULE_1__.contacts)(main);
 
     //footer
     let footer = document.createElement("div")
@@ -112,6 +114,61 @@ function home(main) {
     wrap.appendChild(imageHome)
 
 }
+
+
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "contacts": () => (/* binding */ contacts)
+/* harmony export */ });
+function contacts(main) {
+    
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+
+    let wrap = document.createElement("div")
+    wrap.classList.add("wrap")
+    containerMain.appendChild(wrap)
+
+    let menu = document.createElement("menu")
+    menu.classList.add("contact")
+    wrap.appendChild(menu)
+
+    let li = document.createElement("li")
+    menu.appendChild(li)
+    let img = document.createElement("img")
+    img.setAttribute("src", "../img/contact.jpg")
+    img.setAttribute("alt","Restaurant Contact")
+    li.appendChild(img)
+
+    menu.appendChild(li)
+
+    li = document.createElement("li")
+    li.innerText = " Phone:(+21#) 1234 - 5678"
+    menu.appendChild(li)
+
+
+    li = document.createElement("li")
+    li.innerText = "Adress: Rua Street, 1. Bairro, Jupiter"
+    menu.appendChild(li)
+
+
+    li = document.createElement("li")
+    li.innerText = "Tuesday-Sunday:  12pm - 9pm"
+    menu.appendChild(li)
+
+    
+
+
+
+    
+}
+
 
 
 
