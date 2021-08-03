@@ -1,10 +1,119 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
 /* 0 */,
 /* 1 */
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-console.log("hello world")
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "loadPage": () => (/* binding */ loadPage)
+/* harmony export */ });
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
+
+function loadPage(){
+    let content = document.getElementById("content");
+    // top
+    let topBar = document.createElement("div")
+    topBar.classList.add("top-bar")
+    content.appendChild(topBar)
+
+    let containerTop = document.createElement("div")
+    containerTop.classList.add("containerTop")
+
+    topBar.appendChild(containerTop)
+
+    let top = document.createElement("div")
+    top.classList.add("top")
+    containerTop.appendChild(top)
+
+    let logo = document.createElement("div")
+    logo.classList.add("logo")
+    logo.innerHTML = "Best Choice"
+    top.appendChild(logo)
+
+    let menu = document.createElement("menu")
+    menu.classList.add("menu")
+    let li = document.createElement("li")
+    li.textContent = "Home"
+    menu.appendChild(li)
+    li = document.createElement("li")
+    li.textContent = "Menu"
+    menu.appendChild(li)
+    li = document.createElement("li")
+    li.textContent = "Contact"
+    menu.appendChild(li)
+    top.appendChild(menu)
+
+    //center page
+
+    let main = document.createElement("div")
+    main.classList.add("main")
+    content.appendChild(main)
+    ;(0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(main);
+
+    //footer
+    let footer = document.createElement("div")
+    footer.classList.add("footer")
+    content.appendChild(footer)
+    
+    let containerFooter = document.createElement("div")
+    containerFooter.classList.add("containerFooter")
+    containerFooter.innerHTML = `Copyright © 2021 <a href="https://github.com/Jess2D"> [ jess2d 🦄 ]</a>`
+    footer.appendChild(containerFooter)
+
+}
+
+
+
+
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "home": () => (/* binding */ home)
+/* harmony export */ });
+function home(main) {
+
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+
+
+    let wrap = document.createElement("div")
+    wrap.classList.add("wrap")
+    containerMain.appendChild(wrap)
+
+    let ourHistory = document.createElement("div")
+    ourHistory.classList.add("our-history")
+    wrap.appendChild(ourHistory)
+
+    let p = document.createElement("p")
+    p.innerText = "We imagine a world where there’s no such thing as a Health Food taste bad and all farmers live prosperously."
+    ourHistory.appendChild(p)
+
+    let button = document.createElement("button")
+    button.classList.add("butt")
+    button.innerHTML = "Learn More"
+    ourHistory.appendChild(button)
+
+    let imageHome = document.createElement("div")
+    imageHome.classList.add("image-home")
+
+    let img = document.createElement("img")
+    img.src = "../img/health.PNG"
+
+    imageHome.appendChild(img)
+    wrap.appendChild(imageHome)
+
+}
+
+
 
 /***/ })
 /******/ 	]);
@@ -34,18 +143,6 @@ console.log("hello world")
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -76,14 +173,16 @@ console.log("hello world")
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_print__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+ 
 
-console.log("aaaaaaaaaaaaaaaaaaaaaaah");
+
+
+
+(0,_loadPage__WEBPACK_IMPORTED_MODULE_0__.loadPage)();
 })();
 
 /******/ })()
