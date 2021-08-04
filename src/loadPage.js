@@ -24,17 +24,36 @@ function loadPage(){
     logo.innerHTML = "Best Choice"
     top.appendChild(logo)
 
+    
+    //menu
     let menu = document.createElement("menu")
     menu.classList.add("menu")
+
+
     let li = document.createElement("li")
-    li.textContent = "Home"
     menu.appendChild(li)
+    let a = document.createElement("a")
+    a.textContent = "Home"
+    a.classList.add("btn")
+    a.classList.add("active")
+    li.appendChild(a) 
+
+  
     li = document.createElement("li")
-    li.textContent = "Menu"
     menu.appendChild(li)
+    a = document.createElement("a")
+    a.textContent = "Menu"
+    a.classList.add("btn")
+    li.appendChild(a) 
+
     li = document.createElement("li")
-    li.textContent = "Contact"
     menu.appendChild(li)
+    a = document.createElement("a")
+    a.textContent = "Contact"
+    a.classList.add("btn")
+    li.appendChild(a) 
+
+
     top.appendChild(menu)
 
     //center page
@@ -42,7 +61,13 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-    nav(main);
+
+    home(main);
+    a.addEventListener("click", (e) => {
+        home(main);
+        main.classList.remove("main")
+      });
+    //nav(main);
 
     //footer
     let footer = document.createElement("div")
