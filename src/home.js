@@ -7,6 +7,7 @@ function home(containerMain, id) {
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
     wrap.setAttribute("id",id)
+    wrap.style.display = "block";
 
     let ourHistory = document.createElement("div")
     ourHistory.classList.add("our-history")

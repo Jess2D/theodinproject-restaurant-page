@@ -83,8 +83,8 @@ function loadPage(){
     containerFooter.innerHTML = `Copyright © 2021 <a href="https://github.com/Jess2D"> [ jess2d 🦄 ]</a>`
     footer.appendChild(containerFooter)
 
-
-
+  
+    
     document.addEventListener('click', function(e){
       if(e.target && e.target.id == "ahome"){
             openPage(e, "home")
