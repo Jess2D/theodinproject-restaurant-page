@@ -1,8 +1,5 @@
-function contacts(main) {
-    
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
+function contacts(containerMain, id) {
+    containerMain.setAttribute("id",id)
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")

@@ -36,24 +36,27 @@ function loadPage(){
     a.textContent = "Home"
     a.classList.add("btn")
     a.classList.add("active")
+    
     li.appendChild(a) 
 
   
     li = document.createElement("li")
     menu.appendChild(li)
     a = document.createElement("a")
+    a.setAttribute("id","menu")
     a.textContent = "Menu"
     a.classList.add("btn")
+    
     li.appendChild(a) 
 
     li = document.createElement("li")
     menu.appendChild(li)
     a = document.createElement("a")
     a.textContent = "Contact"
+    a.setAttribute("id","contact")
     a.classList.add("btn")
     li.appendChild(a) 
-
-
+    
     top.appendChild(menu)
 
     //center page
@@ -61,12 +64,13 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-
-    home(main);
-    a.addEventListener("click", (e) => {
-        home(main);
-        main.classList.remove("main")
-      });
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+    home(containerMain,"home")
+    nav(containerMain, "food")
+    contacts(containerMain,"contact")
+    
     //nav(main);
 
     //footer
@@ -81,6 +85,24 @@ function loadPage(){
 
 }
 
+
+
+function openPage(evt, page) {
+    let i, pageContent, pagelinks;
+
+    pageContent = document.getElementsByClassName('main')
+    for (i = 0; i < pageContent.length; i++) {
+        pageContent[i].style.display = "none";
+      }
+
+    pagelinks = document.getElementsByClassName("btn");
+      for (i = 0; i < pagelinks.length; i++) {
+        pagelinks[i].className = pagelinks[i].className.replace(" active", "");
+      }
+
+    //document.getElementById(page).style.display = "block";
+    //evt.currentTarget.className += " active";
+}
 
 
 export {loadPage} ;

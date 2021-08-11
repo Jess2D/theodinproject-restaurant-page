@@ -50,24 +50,27 @@ function loadPage(){
     a.textContent = "Home"
     a.classList.add("btn")
     a.classList.add("active")
+    
     li.appendChild(a) 
 
   
     li = document.createElement("li")
     menu.appendChild(li)
     a = document.createElement("a")
+    a.setAttribute("id","menu")
     a.textContent = "Menu"
     a.classList.add("btn")
+    
     li.appendChild(a) 
 
     li = document.createElement("li")
     menu.appendChild(li)
     a = document.createElement("a")
     a.textContent = "Contact"
+    a.setAttribute("id","contact")
     a.classList.add("btn")
     li.appendChild(a) 
-
-
+    
     top.appendChild(menu)
 
     //center page
@@ -75,12 +78,13 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-
-    ;(0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(main);
-    a.addEventListener("click", (e) => {
-        (0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(main);
-        main.classList.remove("main")
-      });
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+    ;(0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(containerMain,"home")
+    ;(0,_menu__WEBPACK_IMPORTED_MODULE_2__.nav)(containerMain, "food")
+    ;(0,_contacts__WEBPACK_IMPORTED_MODULE_1__.contacts)(containerMain,"contact")
+    
     //nav(main);
 
     //footer
@@ -97,6 +101,24 @@ function loadPage(){
 
 
 
+function openPage(evt, page) {
+    let i, pageContent, pagelinks;
+
+    pageContent = document.getElementsByClassName('main')
+    for (i = 0; i < pageContent.length; i++) {
+        pageContent[i].style.display = "none";
+      }
+
+    pagelinks = document.getElementsByClassName("btn");
+      for (i = 0; i < pagelinks.length; i++) {
+        pagelinks[i].className = pagelinks[i].className.replace(" active", "");
+      }
+
+    //document.getElementById(page).style.display = "block";
+    //evt.currentTarget.className += " active";
+}
+
+
 
 
 /***/ }),
@@ -107,13 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "home": () => (/* binding */ home)
 /* harmony export */ });
-function home(main) {
-
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
-
-
+function home(containerMain, id) {
+    
+    containerMain.setAttribute("id",id)
+  
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
@@ -152,11 +171,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "contacts": () => (/* binding */ contacts)
 /* harmony export */ });
-function contacts(main) {
-    
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
+function contacts(containerMain, id) {
+    containerMain.setAttribute("id",id)
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
@@ -207,10 +223,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "nav": () => (/* binding */ nav)
 /* harmony export */ });
-function nav(main) {
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
+function nav(containerMain, id) {
+    containerMain.setAttribute("id",id)
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")

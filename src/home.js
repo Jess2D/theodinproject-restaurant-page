@@ -1,10 +1,7 @@
-function home(main) {
-
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
-
-
+function home(containerMain, id) {
+    
+    containerMain.setAttribute("id",id)
+  
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
