@@ -1,10 +1,12 @@
+import {loadPage} from "./loadPage"
 function home(containerMain, id) {
+
     
-    containerMain.setAttribute("id",id)
   
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let ourHistory = document.createElement("div")
     ourHistory.classList.add("our-history")

@@ -34,16 +34,15 @@ function loadPage(){
     menu.appendChild(li)
     let a = document.createElement("a")
     a.textContent = "Home"
+    a.setAttribute("id","ahome")
     a.classList.add("btn")
-    a.classList.add("active")
-    
     li.appendChild(a) 
 
   
     li = document.createElement("li")
     menu.appendChild(li)
     a = document.createElement("a")
-    a.setAttribute("id","menu")
+    a.setAttribute("id","amenu")
     a.textContent = "Menu"
     a.classList.add("btn")
     
@@ -53,9 +52,10 @@ function loadPage(){
     menu.appendChild(li)
     a = document.createElement("a")
     a.textContent = "Contact"
-    a.setAttribute("id","contact")
+    a.setAttribute("id","acontact")
     a.classList.add("btn")
     li.appendChild(a) 
+   
     
     top.appendChild(menu)
 
@@ -83,14 +83,24 @@ function loadPage(){
     containerFooter.innerHTML = `Copyright © 2021 <a href="https://github.com/Jess2D"> [ jess2d 🦄 ]</a>`
     footer.appendChild(containerFooter)
 
+
+
+    document.addEventListener('click', function(e){
+      if(e.target && e.target.id == "ahome"){
+            openPage(e, "home")
+       } if(e.target && e.target.id == "acontact"){
+        openPage(e, "contact")
+       }if(e.target && e.target.id == "amenu"){
+        openPage(e, "food")}
+   });
+
 }
 
 
 
 function openPage(evt, page) {
     let i, pageContent, pagelinks;
-
-    pageContent = document.getElementsByClassName('main')
+    pageContent = document.getElementsByClassName('wrap')
     for (i = 0; i < pageContent.length; i++) {
         pageContent[i].style.display = "none";
       }
@@ -100,8 +110,8 @@ function openPage(evt, page) {
         pagelinks[i].className = pagelinks[i].className.replace(" active", "");
       }
 
-    //document.getElementById(page).style.display = "block";
-    //evt.currentTarget.className += " active";
+    document.getElementById(page).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
 

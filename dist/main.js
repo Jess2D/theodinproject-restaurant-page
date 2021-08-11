@@ -48,16 +48,15 @@ function loadPage(){
     menu.appendChild(li)
     let a = document.createElement("a")
     a.textContent = "Home"
+    a.setAttribute("id","ahome")
     a.classList.add("btn")
-    a.classList.add("active")
-    
     li.appendChild(a) 
 
   
     li = document.createElement("li")
     menu.appendChild(li)
     a = document.createElement("a")
-    a.setAttribute("id","menu")
+    a.setAttribute("id","amenu")
     a.textContent = "Menu"
     a.classList.add("btn")
     
@@ -67,9 +66,10 @@ function loadPage(){
     menu.appendChild(li)
     a = document.createElement("a")
     a.textContent = "Contact"
-    a.setAttribute("id","contact")
+    a.setAttribute("id","acontact")
     a.classList.add("btn")
     li.appendChild(a) 
+   
     
     top.appendChild(menu)
 
@@ -97,14 +97,24 @@ function loadPage(){
     containerFooter.innerHTML = `Copyright © 2021 <a href="https://github.com/Jess2D"> [ jess2d 🦄 ]</a>`
     footer.appendChild(containerFooter)
 
+
+
+    document.addEventListener('click', function(e){
+      if(e.target && e.target.id == "ahome"){
+            openPage(e, "home")
+       } if(e.target && e.target.id == "acontact"){
+        openPage(e, "contact")
+       }if(e.target && e.target.id == "amenu"){
+        openPage(e, "food")}
+   });
+
 }
 
 
 
 function openPage(evt, page) {
     let i, pageContent, pagelinks;
-
-    pageContent = document.getElementsByClassName('main')
+    pageContent = document.getElementsByClassName('wrap')
     for (i = 0; i < pageContent.length; i++) {
         pageContent[i].style.display = "none";
       }
@@ -114,8 +124,8 @@ function openPage(evt, page) {
         pagelinks[i].className = pagelinks[i].className.replace(" active", "");
       }
 
-    //document.getElementById(page).style.display = "block";
-    //evt.currentTarget.className += " active";
+    document.getElementById(page).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
 
@@ -129,13 +139,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "home": () => (/* binding */ home)
 /* harmony export */ });
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
 function home(containerMain, id) {
+
     
-    containerMain.setAttribute("id",id)
   
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let ourHistory = document.createElement("div")
     ourHistory.classList.add("our-history")
@@ -171,12 +184,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "contacts": () => (/* binding */ contacts)
 /* harmony export */ });
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
 function contacts(containerMain, id) {
-    containerMain.setAttribute("id",id)
+  
+    
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let menu = document.createElement("menu")
     menu.classList.add("contact")
@@ -223,12 +240,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "nav": () => (/* binding */ nav)
 /* harmony export */ });
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
 function nav(containerMain, id) {
-    containerMain.setAttribute("id",id)
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let grid = document.createElement("div")
     grid.classList.add("grid")
