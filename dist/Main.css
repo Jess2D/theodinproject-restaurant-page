@@ -50,6 +50,10 @@ menu li {
 
 .wrap{
     padding: 82px;
+    display: none;
+}
+
+.homeContainer{
     display: flex;
     flex-direction: row;   
 }

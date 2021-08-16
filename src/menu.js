@@ -1,11 +1,10 @@
-function nav(main) {
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
+import {loadPage} from "./loadPage"
+function nav(containerMain, id) {
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let grid = document.createElement("div")
     grid.classList.add("grid")

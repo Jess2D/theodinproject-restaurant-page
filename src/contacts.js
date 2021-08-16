@@ -1,12 +1,12 @@
-function contacts(main) {
+import {loadPage} from "./loadPage"
+function contacts(containerMain, id) {
+  
     
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let menu = document.createElement("menu")
     menu.classList.add("contact")

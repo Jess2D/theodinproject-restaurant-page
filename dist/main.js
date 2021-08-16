@@ -38,17 +38,39 @@ function loadPage(){
     logo.innerHTML = "Best Choice"
     top.appendChild(logo)
 
+    
+    //menu
     let menu = document.createElement("menu")
     menu.classList.add("menu")
+
+
     let li = document.createElement("li")
-    li.textContent = "Home"
     menu.appendChild(li)
+    let a = document.createElement("a")
+    a.textContent = "Home"
+    a.setAttribute("id","ahome")
+    a.classList.add("btn")
+    li.appendChild(a) 
+
+  
     li = document.createElement("li")
-    li.textContent = "Menu"
     menu.appendChild(li)
+    a = document.createElement("a")
+    a.setAttribute("id","amenu")
+    a.textContent = "Menu"
+    a.classList.add("btn")
+    
+    li.appendChild(a) 
+
     li = document.createElement("li")
-    li.textContent = "Contact"
     menu.appendChild(li)
+    a = document.createElement("a")
+    a.textContent = "Contact"
+    a.setAttribute("id","acontact")
+    a.classList.add("btn")
+    li.appendChild(a) 
+   
+    
     top.appendChild(menu)
 
     //center page
@@ -56,7 +78,14 @@ function loadPage(){
     let main = document.createElement("div")
     main.classList.add("main")
     content.appendChild(main)
-    ;(0,_menu__WEBPACK_IMPORTED_MODULE_2__.nav)(main);
+    let containerMain = document.createElement("div")
+    containerMain.classList.add("containerMain")
+    main.appendChild(containerMain)
+    ;(0,_home__WEBPACK_IMPORTED_MODULE_0__.home)(containerMain,"home")
+    ;(0,_menu__WEBPACK_IMPORTED_MODULE_2__.nav)(containerMain, "food")
+    ;(0,_contacts__WEBPACK_IMPORTED_MODULE_1__.contacts)(containerMain,"contact")
+    
+    //nav(main);
 
     //footer
     let footer = document.createElement("div")
@@ -68,8 +97,36 @@ function loadPage(){
     containerFooter.innerHTML = `Copyright © 2021 <a href="https://github.com/Jess2D"> [ jess2d 🦄 ]</a>`
     footer.appendChild(containerFooter)
 
+  
+    
+    document.addEventListener('click', function(e){
+      if(e.target && e.target.id == "ahome"){
+            openPage(e, "home")
+       } if(e.target && e.target.id == "acontact"){
+        openPage(e, "contact")
+       }if(e.target && e.target.id == "amenu"){
+        openPage(e, "food")}
+   });
+
 }
 
+
+
+function openPage(evt, page) {
+    let i, pageContent, pagelinks;
+    pageContent = document.getElementsByClassName('wrap')
+    for (i = 0; i < pageContent.length; i++) {
+        pageContent[i].style.display = "none";
+      }
+
+    pagelinks = document.getElementsByClassName("btn");
+      for (i = 0; i < pagelinks.length; i++) {
+        pagelinks[i].className = pagelinks[i].className.replace(" active", "");
+      }
+
+    document.getElementById(page).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
 
 
@@ -82,29 +139,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "home": () => (/* binding */ home)
 /* harmony export */ });
-function home(main) {
-
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
+function home(containerMain, id) {
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
+    wrap.style.display = "block";
+
+    let homeContainer = document.createElement("div")
+    homeContainer.classList.add("homeContainer")
+    wrap.appendChild(homeContainer)
 
     let ourHistory = document.createElement("div")
     ourHistory.classList.add("our-history")
-    wrap.appendChild(ourHistory)
+    homeContainer.appendChild(ourHistory)
 
     let p = document.createElement("p")
     p.innerText = "We imagine a world where there’s no such thing as a Health Food taste bad and all farmers live prosperously."
     ourHistory.appendChild(p)
-
-    let button = document.createElement("button")
-    button.classList.add("butt")
-    button.innerHTML = "Learn More"
-    ourHistory.appendChild(button)
 
     let imageHome = document.createElement("div")
     imageHome.classList.add("image-home")
@@ -113,7 +169,7 @@ function home(main) {
     img.src = "../img/health.PNG"
 
     imageHome.appendChild(img)
-    wrap.appendChild(imageHome)
+    homeContainer.appendChild(imageHome)
 
 }
 
@@ -127,15 +183,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "contacts": () => (/* binding */ contacts)
 /* harmony export */ });
-function contacts(main) {
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+function contacts(containerMain, id) {
+  
     
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let menu = document.createElement("menu")
     menu.classList.add("contact")
@@ -182,14 +239,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "nav": () => (/* binding */ nav)
 /* harmony export */ });
-function nav(main) {
-    let containerMain = document.createElement("div")
-    containerMain.classList.add("containerMain")
-    main.appendChild(containerMain)
+/* harmony import */ var _loadPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+function nav(containerMain, id) {
 
     let wrap = document.createElement("div")
     wrap.classList.add("wrap")
     containerMain.appendChild(wrap)
+    wrap.setAttribute("id",id)
 
     let grid = document.createElement("div")
     grid.classList.add("grid")
